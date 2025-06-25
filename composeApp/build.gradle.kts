@@ -71,7 +71,7 @@ kotlin {
 }
 
 android {
-    namespace = "de.babsek.jfs25.jfs25_kmp"
+    namespace = "de.babsek.jfs25kmp.jfs25_kmp"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {

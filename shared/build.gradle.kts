@@ -50,7 +50,7 @@ kotlin {
 }
 
 android {
-    namespace = "de.babsek.jfs25.jfs25_kmp.shared"
+    namespace = "de.babsek.jfs25kmp.jfs25_kmp.shared"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
