@@ -25,7 +25,13 @@ kotlin {
             }
         }
     }
-    macosArm64()
+    macosArm64 {
+        binaries {
+            executable {
+                entryPoint = "de.babsek.jfs25kmp.main"
+            }
+        }
+    }
 
     js(IR) {
         browser()
