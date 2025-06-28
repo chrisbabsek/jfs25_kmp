@@ -18,6 +18,13 @@ kotlin {
 
     jvm()
 
+    linuxX64 {
+        binaries {
+            executable {
+                entryPoint = "de.babsek.jfs25kmp.main"
+            }
+        }
+    }
     macosArm64()
 
     js(IR) {
@@ -46,6 +53,12 @@ kotlin {
     }
 
     sourceSets {
+        all {
+            languageSettings {
+                optIn("kotlin.js.ExperimentalJsExport")
+            }
+        }
+
         commonMain.dependencies {
             // put your Multiplatform dependencies here
         }
