@@ -20,7 +20,13 @@ kotlin {
 
     macosArm64()
 
-    js()
+    js(IR) {
+        browser()
+        nodejs()
+        binaries.executable()
+        binaries.library()
+        generateTypeScriptDefinitions()
+    }
 
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
