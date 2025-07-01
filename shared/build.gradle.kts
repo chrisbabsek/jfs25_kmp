@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalKotlinGradlePluginApi::class)
+
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -15,7 +17,6 @@ kotlin {
         }
     }
 
-    @OptIn(ExperimentalKotlinGradlePluginApi::class)
     jvm {
         mainRun {
             this.mainClass = "de.babsek.jfs25kmp.JvmMainKt"
@@ -71,13 +72,18 @@ kotlin {
         all {
             languageSettings {
                 optIn("kotlin.js.ExperimentalJsExport")
-                optIn("org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi")
             }
         }
 
         commonMain.dependencies {
             // put your Multiplatform dependencies here
         }
+
+        nativeMain.dependencies {
+            implementation(libs.ktor.serverCore)
+            implementation(libs.ktor.serverCio)
+        }
+
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
