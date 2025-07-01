@@ -1,10 +1,10 @@
 package de.babsek.jfs25kmp.server
 
-import io.ktor.server.cio.*
 import io.ktor.server.engine.*
+import io.ktor.server.netty.*
 
-fun nativeServerMain() {
-    embeddedServer(CIO, port = 8080) {
+fun jvmServerMain() {
+    embeddedServer(Netty, port = 8080) {
         commonServerConfig()
         commonControllerConfiguration()
     }

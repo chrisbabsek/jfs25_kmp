@@ -1,0 +1,8 @@
+### Fetch /
+GET {{baseUrl}}
+
+###
+
+### Fetch /numbers
+GET {{baseUrl}}/numbers/7
+Accept: application/json
