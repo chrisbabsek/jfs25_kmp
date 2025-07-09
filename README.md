@@ -4,9 +4,7 @@ This project is made with the intention to show the basics of Kotlin Multiplatfo
 Stuttgart, Germany.
 
 # Ktor Framework
-
 https://ktor.io
 
 # Awesome KMP
-
 https://github.com/terrakok/kmp-awesome

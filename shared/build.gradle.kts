@@ -78,7 +78,6 @@ kotlin {
         commonMain.dependencies {
             implementation(libs.ktor.contentNegotiation)
             implementation(libs.ktor.serializationJson)
-            // put your Multiplatform dependencies here
         }
 
         jvmMain.dependencies {
